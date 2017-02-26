@@ -35,6 +35,6 @@ describe('ModelComponent', () => {
   it('after call decress value is 0', () => {
     component.decress();
     console.log(component.value);
-    expect(component.value).toEqual(4);
+    expect(component.value).toEqual(0);
   });
 });
