@@ -9,6 +9,7 @@ module.exports = function (config) {
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
+      require('karma-mocha-reporter'),
       require('karma-coverage-istanbul-reporter'),
       require('@angular/cli/plugins/karma')
     ],
@@ -33,7 +34,21 @@ module.exports = function (config) {
     },
     reporters: config.angularCli && config.angularCli.codeCoverage
               ? ['progress', 'coverage-istanbul']
-              : ['progress', 'kjhtml'],
+              : ['mocha'],
+    mochaReporter: {
+      colors: {
+        success: 'green',
+        info: 'bgGray',
+        warning: 'cyan',
+        error: 'red'
+      },
+      symbols: {
+        success: '+',
+        info: '#',
+        warning: '!',
+        error: 'x'
+      }
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
