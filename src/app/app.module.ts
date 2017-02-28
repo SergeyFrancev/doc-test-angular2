@@ -4,24 +4,21 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ModelComponent } from './model/model.component';
-import {UserService} from "./user.service";
-import {AccountService} from "./account.service";
+import { TestHostComponent } from './test-host/test-host.component';
+import { UserBannerComponent } from './user-banner/user-banner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ModelComponent
+    TestHostComponent,
+    UserBannerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [
-    UserService,
-    AccountService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

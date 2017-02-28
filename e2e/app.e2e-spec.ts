@@ -1,6 +1,6 @@
 import { UnitTestPage } from './app.po';
 
-describe('unit-test App', () => {
+describe('unit-test App', function() {
   let page: UnitTestPage;
 
   beforeEach(() => {

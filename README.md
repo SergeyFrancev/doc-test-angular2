@@ -25,3 +25,29 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+##PLAN
+
+- angular-cli
+  * структура проекта
+  * консольное расширение
+- Тестирование модэлий  
+- описание для expect
+- Дебаг тэстирования
+- Тестирование сервисов
+- Мок для компонентов
+- Тестирование компонентов
+  * Инитиализация компонента (TestBed.createComponent) 
+  * Component fixture
+    * componentInstance
+    * debugElement (get element by JQuery selector)
+    * nativeElement
+    * fixture.detectChanges (Пробрасывает изменения до DOM)
+     * auto change detection
+  * async test case 
+  * get service from fixture injector
+- spyOn
+-test router-outlet
+
+- e2e?
