@@ -1,0 +1,11 @@
+.step {
+  min-width: 1200px;
+}
+
+.slide {
+  min-width: 1200px;
+}
+
+pre code {
+  font-size: 19px;
+}

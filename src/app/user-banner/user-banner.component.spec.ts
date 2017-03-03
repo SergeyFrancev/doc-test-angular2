@@ -6,7 +6,7 @@ import {DebugElement} from '@angular/core';
 import {UserBannerComponent} from './user-banner.component';
 import {Router} from "@angular/router";
 import {MockRouter} from "../test/helpers/router.mock";
-import {User} from "../user";
+import {User} from '../user.model'
 
 function createRouterMock() {
   let rout = new MockRouter();

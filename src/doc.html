@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular 2 - Unit testing</title>
+  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js"></script>-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./impress/rainbow-master/css/github.css">
+  <link rel="stylesheet" href="./css/doc.css">
+</head>
+<body class="doc">
+<div id="impress">
+  <!--<div id="overview" class="step" data-scale="2">-->
+  <!--</div>-->
+  <div id="new_bookmark_1" class="slide step" data-x="-700" data-y="-400" data-scale="1">
+    <div class="slide">
+      <h1 class="center">Angular 2 - Unit testing</h1>
+      <div class="row">
+        <div class="col s4 center">
+          <img src="./images/angular-cli.png" alt="" style="width: 238px; margin-top: 37px;">
+        </div>
+        <div class="col s4 center">
+        </div>
+        <div class="col s4 center">
+          <img src="./images/web-pack.jpg" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4 center">
+        </div>
+        <div class="col s4 center">
+          <img src="./images/angular2.png" alt="" style="margin-top: -26px; width: 280px;">
+        </div>
+        <div class="col s4 center">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4 center">
+          <img src="./images/karma.png" alt="" style="width: 318px; margin-top: 24px;">
+        </div>
+        <div class="col s4 center">
+        </div>
+        <div class="col s4 center">
+          <img src="./images/jasmine.png" alt="" style="margin-left: -30px;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="new_bookmark_2" class="slide2 step" data-x="-700" data-y="400" data-rotate="0">
+    <div class="slide">
+      <h1 class="center">Test for Model</h1>
+    <pre>
+      <code data-language="javascript">
+import {User} from "./user.model";
+
+describe('UserModel', () => {
+  it('create user model', () => {
+    let user = new User();
+    expect(user).toBeTruthy();
+  });
+
+  it('Empty id after create without params', () => {
+    let user = new User();
+    expect(user.id).toBeNull()
+  });
+
+  it('Bind user id', () => {
+    let user = new User(123);
+    expect(user.id).toBe(123);
+  });
+});
+      </code>
+    </pre>
+    </div>
+  </div>
+  <div id="new_bookmark_3" class="slide2 step" data-x="700" data-y="-500" data-rotate="180">
+    <h2>Создание новой Закладки (3)</h2>
+    <p>Заполнить все поля формы</p>
+    <div><img src="" alt=""/></div>
+  </div>
+  <div id="new_bookmark_4" class="slide step" data-x="700" data-y="300" data-rotate="270">
+    <h2>Создание новой Закладки (4)</h2>
+    <p>Для предпросмотра нажать голубую кнопку <strong>Просмотр</strong></p>
+    <div><img src="" alt=""/></div>
+  </div>
+  <div id="new_bookmark_5" class="slide step" data-x="800" data-y="500" data-rotate="0">
+    <h2>Создание новой Закладки (5)</h2>
+    <p>Для создания нажать синюю кнопку <strong>Создать</strong></p>
+    <div><img src="" alt=""/></div>
+  </div>
+  <div id="new_bookmark_6" class="slide1 step" data-x="-900" data-y="1600" data-rotate="90">
+    <h2>Создание новой Закладки (6)</h2>
+    <p>Закладка создана!</p>
+    <div><img src="" alt=""/></div>
+  </div>
+</div>
+</body>
+<script src="./impress/impress.js"></script>
+<script src="./impress/rainbow-custom.min.js"></script>
+<script>impress().init();</script>
+</html>

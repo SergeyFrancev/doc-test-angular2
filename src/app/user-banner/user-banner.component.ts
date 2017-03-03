@@ -1,6 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {Router} from "@angular/router";
-import {User} from "../user";
+import {User} from '../user.model'
 
 @Component({
   selector: 'app-user-banner',
