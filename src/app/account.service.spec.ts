@@ -1,7 +1,7 @@
 import {TestBed, inject, async} from '@angular/core/testing';
 
 import {AccountService} from './account.service';
-import {Http} from "@angular/http";
+import {Http, ConnectionBackend, RequestOptions} from "@angular/http";
 import {MockHttpService} from "./test/helpers/http.mock";
 
 describe('AccountService', () => {
@@ -12,9 +12,15 @@ describe('AccountService', () => {
     TestBed.configureTestingModule({
       providers: [
         AccountService,
-        {provide: Http, useValue: http},
+        // Http,
+        // ConnectionBackend,
+        // RequestOptions,
+        // {provide: Http, useClass: MockHttpService},
+        // {provide: Http, useValue: http},
       ]
     });
+
+    http = TestBed.get(Http);
 
     inject([AccountService], (account: AccountService) => {
       service = account
@@ -46,7 +52,6 @@ describe('AccountService', () => {
   it('not update account value, if load account with error', async(() => {
     let account = {name: 'test'};
     http.result = account;
-    // http.error = new Error('404');
     service.loadAccount('123')
       .then((data) => expect(service.account).toBe(account))
   }));

@@ -49,5 +49,20 @@ describe('UserBannerComponent', () => {
     const navArgs = spy.calls.first().args[0];
     // expecting to navigate to id of the component's first hero
     expect(navArgs).toBe('test_url/' + component.user.id, 'should nav to User');
+  });
+
+  it('changes', (done) => {
+    let router = fixture.debugElement.injector.get(Router);
+    let spy = spyOn(router, 'navigate')
+      .and.returnValue(Promise.resolve(true));
+
+    component.applyChanges()
+      .then(() => {
+        expect(component.isApply).toBeTruthy();
+        done()
+      })
+      .catch(err => {
+        done.fail(err)
+      })
   })
 });

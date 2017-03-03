@@ -10,12 +10,18 @@ import {User} from '../user.model'
 export class UserBannerComponent implements OnInit {
   @Input() user: User;
 
-  constructor(private router: Router) { }
+  isApply: boolean = true;
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }
 
   navigateToUser() {
-    this.router.navigateByUrl(`test_url/${this.user.id}`)
+    return this.router.navigateByUrl(`test_url/${this.user.id}`)
+  }
+
+  applyChanges(): Promise<boolean> {
+    return this.router.navigate(['user-apply'])
+      .then(() => this.isApply = true)
   }
 }

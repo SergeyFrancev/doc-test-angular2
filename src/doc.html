@@ -47,9 +47,12 @@
       </div>
     </div>
   </div>
-  <div id="new_bookmark_2" class="slide2 step" data-x="-700" data-y="400" data-rotate="0">
+  <div id="new_bookmark_2" class="slide step" data-x="-700" data-y="500" data-rotate="0">
     <div class="slide">
-      <h1 class="center">Test for Model</h1>
+      <h1 class="center">Test for simple Model</h1>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <div>
     <pre>
       <code data-language="javascript">
 import {User} from "./user.model";
@@ -72,27 +75,64 @@ describe('UserModel', () => {
 });
       </code>
     </pre>
+      </div>
     </div>
   </div>
-  <div id="new_bookmark_3" class="slide2 step" data-x="700" data-y="-500" data-rotate="180">
-    <h2>Создание новой Закладки (3)</h2>
-    <p>Заполнить все поля формы</p>
-    <div><img src="" alt=""/></div>
+  <div id="new_bookmark_3" class="slide step" data-x="900" data-y="-500" data-rotate="180" data-scale="0.2">
+    <div class="slide">
+      <h2 class="center">Test with inject dependence</h2>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <div class="content-data">
+        <ul>
+          <li>- <code data-language="javascript">inject([CmpName], (cmp) => {})</code></li>
+          <li>- angular <code>async()</code></li>
+          <li>- проблема с созданием Mock объектов</li>
+          <li>- Mock inject component</li>
+          <li>- Get Mock object from TestBed</li>
+          <li>- Mock inject component use factory</li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div id="new_bookmark_4" class="slide step" data-x="700" data-y="300" data-rotate="270">
-    <h2>Создание новой Закладки (4)</h2>
-    <p>Для предпросмотра нажать голубую кнопку <strong>Просмотр</strong></p>
-    <div><img src="" alt=""/></div>
+  <div id="new_bookmark_4" class="slide step" data-x="900" data-y="-500" data-rotate="180">
+    <div class="slide">
+      <h2 class="center">Test for component item</h2>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <div class="content-data">
+        <ul>
+          <li>- Создание компонентов <code>TestBed.createComponent(CmpName)</code></li>
+          <li>- Инстант компонента <code>fixture.componentInstance</code></li>
+          <li>- DOM element <code>fixture.nativeElement</code></li>
+          <li>- DeBug element <code>fixture.debugElement</code></li>
+          <li>- <code>fixture.detectChanges()</code></li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div id="new_bookmark_5" class="slide step" data-x="800" data-y="500" data-rotate="0">
-    <h2>Создание новой Закладки (5)</h2>
-    <p>Для создания нажать синюю кнопку <strong>Создать</strong></p>
-    <div><img src="" alt=""/></div>
+  <div id="new_bookmark_5" class="slide step" data-x="1000" data-y="500" data-rotate="0">
+    <h2 class="center">spyOn</h2>
+    <ul>
+      <li><code>spyOn</code> for check event</li>
+      <li><code>spyOn</code> for mock method</li>
+    </ul>
   </div>
   <div id="new_bookmark_6" class="slide1 step" data-x="-900" data-y="1600" data-rotate="90">
-    <h2>Создание новой Закладки (6)</h2>
-    <p>Закладка создана!</p>
-    <div><img src="" alt=""/></div>
+    <div class="slide">
+      <h2 class="center">Плюшки</h2>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <div class="content-data">
+        <ul>
+          <li>- Дебаг тэстов 0_о</li>
+          <li>- Augury</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 </body>

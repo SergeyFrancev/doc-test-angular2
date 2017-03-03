@@ -6,7 +6,10 @@ export class MockRouter {
   }
 
   navigateByUrl(url: string) {
-    this._url = url
+    this._url = url;
     return Promise.resolve(true)
+  }
+
+  navigate(command){
   }
 }

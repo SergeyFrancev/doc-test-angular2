@@ -33,7 +33,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   * структура проекта
   * консольное расширение
 - Тестирование модэлий  
-- описание для expect
 - Дебаг тэстирования
 - Тестирование сервисов
 - Мок для компонентов
@@ -48,6 +47,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   * async test case 
   * get service from fixture injector
 - spyOn
--test router-outlet
+- test router-outlet
+- описание для expect
 
 - e2e?

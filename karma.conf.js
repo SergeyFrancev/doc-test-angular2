@@ -9,15 +9,18 @@ module.exports = function (config) {
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
+      require('karma-remap-istanbul'),
       require('karma-mocha-reporter'),
       require('karma-coverage-istanbul-reporter'),
+      require('karma-coverage'),
       require('@angular/cli/plugins/karma')
     ],
     files: [
       { pattern: './src/test.ts', watched: false }
     ],
     preprocessors: {
-      './src/test.ts': ['@angular/cli']
+      './src/test.ts': ['@angular/cli'],
+      './src/**/!(*spec).js': ['coverage']
     },
     mime: {
       'text/x-typescript': ['ts','tsx']
@@ -29,12 +32,13 @@ module.exports = function (config) {
       }
     },
     angularCli: {
+      codeCoverage: true,
       config: './angular-cli.json',
       environment: 'dev'
     },
-    reporters: config.angularCli && config.angularCli.codeCoverage
-              ? ['progress', 'coverage-istanbul']
-              : ['mocha'],
+    reporters: /*config.angularCli && config.angularCli.codeCoverage*/
+              // /*? */['progress', 'coverage', 'karma-remap-istanbul'],
+              /*: */['mocha'],
     mochaReporter: {
       colors: {
         success: 'green',

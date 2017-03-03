@@ -22,7 +22,7 @@ describe('ModelComponent', () => {
     component = fixture.componentInstance;
     el = fixture.nativeElement;
     de = fixture.debugElement;
-    fixture.detectChanges();
+    // fixture.detectChanges();
   });
 
   describe('- methods', () => {
@@ -61,7 +61,7 @@ describe('ModelComponent', () => {
       let value = de.query(By.css('.counter-value'));
       expect(value).toBeTruthy();
       expect(value.nativeElement).toBeTruthy();
-      expect(value.nativeElement.innerText).toBe('1');
+      expect(value.nativeElement.innerText).toBe('1', 'Content is empty');
     });
 
     it('update value to 2 after increase', () => {
